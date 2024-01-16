@@ -1,0 +1,55 @@
+//----------------------------//
+//-- CUSTOM ITEM SCHEMAS!!! --//
+//----------------------------//
+//
+// [January 12, 2023]
+// Okay, listen. It was just a hunch, but after I did some digging, it seemed more and more feasible, so here we go.
+// Remember how in June, last year, my friend Yakibomb passed some eldritch ficool2 knowledge to me, revealing "#base" could be used to load extra files for mod_textures.txt to load?
+// It works for more. It works for more than just that.
+//
+// It even works
+// FOR ITEMS_GAME.TXT
+//
+// You guys know what this MEANS, right!?
+// It means we can all just hook onto a clean copy of items_game.txt, have this stuff at the top, and we can ALL have our weapons working with no fuss AND no muss!
+// As it is, I've already provided mine as an example. I made no modifications to that file, it's JUST the same as a map-specific items_game.txt
+// Literally all you do is rename that map-specific file of yours, hook it here, and bam, it WORKS!
+//
+// Granted, it's still mostly useful for changing the global items_game.txt (which this still does), but it makes it much easier to finally merge packs together, if people feel the urge!
+// ALSO, this works with "sv_reload_item_schema"! So you can point all of your map-specifics toward one central file if you're not hosting on a server or something
+//
+// Okay, on with it, sorry for runnin' my mouth. I'm just excited.
+// I've taken the liberty to set it up similarly to hud_textures.txt, so we can start setting up shop more easily.
+//
+//-------------------------------------------------------------------------------------------------------------------------------------//
+
+	#base "items_game_tf2c.txt"												// TF2C's Original Items_Game! IF THERE'S A NEW UPDATE FOR THE GAME, PLEASE COPY THE NEW VERSION OF THEIR ITEMS_GAME OVER AND RENAME IT!! I made no other changes!
+
+// Catch-all if you just wanna add your own stuff quickly!
+	#base "custom_items/custom_items_1.txt"
+	#base "custom_items/custom_items_2.txt"
+	#base "custom_items/custom_items_3.txt"
+	#base "custom_items/custom_items_4.txt"
+	#base "custom_items/custom_items_5.txt"
+
+// Includes for other Weapons Packs / CW Mods! Add your own if you need, or let me know so I can update it!
+// IF YOU WANT TO BE ADDED TO THIS LIST / WANT NAMING SCHEMES CHANGED, AND I HAVEN'T DONE SO YET, CONTACT ME ON GB OR DISCORD!!
+	#base "custom_items/Knockout! Custom Weapons.txt"						// Knockout! Custom Weapons
+	#base "custom_items/Custom Weapons Classic.txt"							// Custom Weapons: Classic
+	#base "custom_items/Mannly Munitions.txt"								// Mannly Munitions [* Same as parent mod]
+	#base "custom_items/Renaissance Revival.txt"							// Yakibomb's "Renaissance Revival"
+	#base "custom_items/Freds Fight-Starters!.txt"							// Fred's Fight-Starters! [* Same as parent mod]
+
+	#base "custom_items/Mombaes Fun-Pack.txt"								// Mombae's Fun-Pack UvU
+	#base "custom_items/Weaponized Insanity.txt"							// Weaponized Insanity Pack
+	#base "custom_items/Spacenauts Armament Box.txt"						// Spacenaut's Armament Box
+	#base "custom_items/Woomys Weapons Pack.txt"							// Woomy's Weapons Pack
+	#base "custom_items/Littlefirez Custom Weapons!.txt"					// Littlefirez's Custom Weapons!
+	#base "custom_items/Tangerine Paint's Weapons Pack.txt"					// T. Paint's Weapons Pack
+
+// NOWP
+	#base "custom_items/New-Old Weapons Pack!.txt"							// New-Old Weapons Pack - Loaded after EVERYTHING else if you wanna replace anything!
+
+"items_game"
+{
+}
